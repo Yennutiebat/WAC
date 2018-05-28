@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    function getLocalstorage() {
+        document.getElementById("result").innerHTML = localStorage.getItem("text");
+    }
+    setInterval(getLocalstorage, 3000);
+</script>
+
+</html>

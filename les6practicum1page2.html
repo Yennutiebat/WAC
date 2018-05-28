@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <form>
+        <input id="input" type="text" onchange="myFunction()">
+    </form>
+</body>
+<script>
+    function myFunction() {
+        if(typeof (Storage) !== "undefined") {
+            localStorage.setItem("text", (document.getElementById("input").value));
+            console.log(localStorage.getItem("text"));
+        }
+    }
+</script>
+
+</html>

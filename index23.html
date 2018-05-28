@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <title>Dynamic Example</title>
+ <body>
+ <form action="DynamicServlet.do" method="get">
+ <div>
+ <input type="text" name="getal1" id="getal1"/>
+ <input type="text" name="operator" id="operator">
+ <input type="text" name="getal2"/>
+ 
+ <input type="button" value="+" onclick="plus()"/>
+<input type="button" value="-"  onclick="aftrekken()"/>
+<input type="button" value="*" onclick="vermenigvuldigen()"/>
+<input type="button" value="/" onclick="delen()"/>
+ <input type="submit" value="Go!" />
+ </div>
+ </form>
+ </body>
+ <script>
+ function plus(){
+	 document.getElementById('operator').value+='+';
+ }
+ function aftrekken(){
+	 document.getElementById('operator').value+='-';
+ }
+ function vermenigvuldigen(){
+	 document.getElementById('operator').value+='*';
+ }
+ function delen(){
+	 document.getElementById('operator').value+='/';
+ }
+ </script>
+</html>

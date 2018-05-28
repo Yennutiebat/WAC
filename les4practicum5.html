@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>JavaScript Rekenmachine</title>
+<style>
+    body {
+        padding: 100px;
+    }
+
+    input {
+        margin: 2px;
+        padding: 15px;
+    }
+
+    input:hover {
+        transform: scale(1.5);
+    }
+
+    #frame {
+        padding: 50px;
+        width: 200px;
+        background-color: grey;
+        border: 2px solid black;
+        border-radius: 10%;
+    }
+</style>
+
+<body>
+    <div id="frame">
+        <form name="rekenmachine">
+            <div id="display">
+                <input type="text" name="antwoord" id="antwoord">
+            </div>
+            <br>
+            <input type="button" value="1" onclick="rekenmachine.antwoord.value+= '1'">
+            <input type="button" value="2" onclick="rekenmachine.antwoord.value+= '2'">
+            <input type="button" value="3" onclick="rekenmachine.antwoord.value+= '3'">
+            <input type="button" value="+" onclick="rekenmachine.antwoord.value+= '+'">
+            <br>
+            <input type="button" value="4" onclick="rekenmachine.antwoord.value+= '4'">
+            <input type="button" value="5" onclick="rekenmachine.antwoord.value+= '5'">
+            <input type="button" value="6" onclick="rekenmachine.antwoord.value+= '6'">
+            <input type="button" value="-" onclick="rekenmachine.antwoord.value+= '-'">
+            <br>
+            <input type="button" value="7" onclick="rekenmachine.antwoord.value+= '7'">
+            <input type="button" value="8" onclick="rekenmachine.antwoord.value+= '8'">
+            <input type="button" value="9" onclick="rekenmachine.antwoord.value+= '9'">
+            <input type="button" value="*" onclick="rekenmachine.antwoord.value+= '*'">
+            <br>
+            <input type="button" value="c" onclick="rekenmachine.antwoord.value= ''">
+            <input type="button" value="0" onclick="rekenmachine.antwoord.value+= '0'">
+            <input type="button" value="=" onclick="rekenmachine.antwoord.value= eval(rekenmachine.antwoord.value)">
+            <input type="button" value="/" onclick="rekenmachine.antwoord.value+= '/'">
+            <br>
+            <input type="button" value="x2" onclick="rekenmachine.antwoord.value*= (document.getElementById('antwoord').value)">
+            <input type="button" value="+/-" onclick="rekenmachine.antwoord.value*= '-1'">
+            <input type="button" value="√" onclick="rekenmachine.antwoord.value= Math.sqrt((document.getElementById('antwoord').value))">
+        </form>
+    </div>
+</body>
+
+</html>
